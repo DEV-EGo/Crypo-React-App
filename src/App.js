@@ -8,6 +8,7 @@ import './App.css';
 function App() {
 
   const[coins,setCoins] = useState([]);
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
     axios
@@ -19,6 +20,13 @@ function App() {
     .catch(error => console.log(error));
   }, []);
 
+  const handelChange = e => {
+    setSearch(e.target.value)
+  }
+
+  const filteredCoins = coins.filter(coin => 
+    coin.name.toLowerCase().includes(search.toLocaleLowerCase())
+    )
 
   return (
     <div className="coin-app">
@@ -29,11 +37,21 @@ function App() {
 
         <form>
           <input type = 'text' placeholder = 'search'
-            className= 'coin-input'/>
+            className= 'coin-input' onChange = {handelChange}/>
         </form>
-        
-      </div>
 
+      </div>
+    {filteredCoins.map(coin => {
+      return 
+        <coin 
+        key ={coin.id} 
+        name = {coin.name} 
+        image ={coin.image}
+        symbol = {coin.symbol}
+        voliume = {coin.market_cap}
+        />;
+      
+    })}
     </div>
 
   );
