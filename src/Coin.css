@@ -68,3 +68,16 @@
 .green {
     color: #11d811;
 }
+
+.coin-search {
+    margin-bottom: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.coin-text {
+    margin-bottom: 32px;
+    text-align: center;
+}
