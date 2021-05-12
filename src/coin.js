@@ -1,5 +1,6 @@
 import React from 'react';
 import './Coin.css';
+
 const coin = ({ name, image, symbol, price, volume, priceChange, marketcap}) => {
     return (
         <div className = 'coin-container'>
@@ -18,7 +19,7 @@ const coin = ({ name, image, symbol, price, volume, priceChange, marketcap}) => 
                     ) : (<p className = "coin-percent green">{priceChange.toFixed(2)}%</p>
                         )}
                         < p className = 'coin-marketcap'>
-                            Mkt Cap: ${marketcap.toLocaleString()}
+                            Market Cap: ${marketcap.toLocaleString()}
                         </p>
                 </div>
             </div>

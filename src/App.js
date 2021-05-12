@@ -35,7 +35,7 @@ function App() {
 
       <div className = 'coin-search'>
 
-        <h1 className = 'coin-text'> Search a Currency</h1>
+        <h1 className = 'coin-text'> Decentralized Finance</h1>
 
         <form>
           <input 
@@ -72,4 +72,5 @@ export default App;
 
 // Built for the use of crypto advocates - market prices will constantly fluctuate
 // enjoy guys
-// Created & Developed by Edwin Gonzalez 5/11/2021
+// Created & Developed 
+// by Edwin Gonzalez 5/11/2021
